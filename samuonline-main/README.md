@@ -95,14 +95,6 @@ Routes.js
 
 ---
 
-## 🖼️ Telas da Aplicação
-
-<p align="center">
-  <img src="1.png" alt="Tela de Login" width="250px">
-  <img src="2.jpg" alt="Tela de Cadastro" width="250px">
-  <img src="3.jpg" alt="Tela Principal" width="250px">
-</p>
-
 <p align="center">
   <img src="4.jpg" alt="Tela de Relatórios" width="250px">
   <img src="5.jpg" alt="Tela de Acessibilidade" width="250px">
