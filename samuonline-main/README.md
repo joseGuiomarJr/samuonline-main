@@ -3,41 +3,95 @@
 </h4>
 
 <h1 align="center">
-    🚀 SAMU-MOB
+    🚀 SAMU-MOB | SAMU Online
 </h1>
 
 <p align="center">
-    Aplicação web voltada para <strong>inovação, acessibilidade e inclusão</strong> na chamada de emergência.
+    Aplicação web desenvolvida em <strong>React + Firebase</strong>, com foco em <strong>acessibilidade, inovação e inclusão digital</strong> no atendimento de emergência.
 </p>
 
 ---
 
 ## 📖 Sobre o Projeto
 
-O **SAMU-Mob** é uma aplicação desenvolvida como protótipo acadêmico com o objetivo de **inovar e facilitar a chamada de emergência** do Serviço de Atendimento Móvel de Urgência (SAMU).  
-A proposta visa **inclusão e acessibilidade**, garantindo que qualquer cidadão, independentemente de suas limitações, consiga solicitar ajuda de forma ágil, intuitiva e eficiente.
+O **SAMU-Mob (SAMU Online)** é um protótipo acadêmico que tem como objetivo **modernizar e facilitar a chamada de emergência** para o Serviço de Atendimento Móvel de Urgência (SAMU).  
+
+A aplicação traz recursos de **login social (Google/Facebook)**, **chat em tempo real** e **módulos de acessibilidade** como **Reconhecimento de Voz** e integração com **VLibras**, visando eliminar barreiras de comunicação e garantir que qualquer cidadão consiga solicitar ajuda de forma rápida e eficiente.
 
 ---
 
-## 🎯 Objetivo
+## 🎯 Objetivos
 
-- Oferecer uma **solução tecnológica acessível** para o acionamento do SAMU.  
-- **Eliminar barreiras de comunicação** para pessoas com diferentes necessidades (auditivas, motoras ou cognitivas).  
-- Garantir uma **experiência fluida e responsiva** em situações críticas.  
-
----
-
-## 💻 Projeto em Desenvolvimento
-
-Este projeto foi desenvolvido no contexto acadêmico do curso de **Sistemas de Informação**, com foco em **prototipação e validação de funcionalidades inovadoras** aplicadas à saúde digital.
+- Simplificar o acionamento do SAMU de forma acessível a todos.  
+- Garantir inclusão para pessoas com diferentes necessidades (auditivas, motoras ou cognitivas).  
+- Oferecer uma experiência responsiva, intuitiva e confiável em situações críticas.  
 
 ---
 
 ## ✅ Demonstração
 
 <h4 align="center">
-    <img src="src/assets/ezgif.com-video-to-gif.gif" alt="Demonstração do SAMU-Mob" width="600px">
+    <img src="src/assets/ezgif.com-video-to-gif.gif" alt="Demonstração do SAMU-Mob">
 </h4>
+
+## ✨ Funcionalidades
+
+**Autenticação e Acesso**
+- 🔵 Login com Google (Firebase Auth + GoogleAuthProvider)  
+- 🔵 Login com Facebook (Firebase Auth + FacebookAuthProvider)  
+- ✉️ Login com e-mail e senha (validação básica)  
+- 🔐 Rotas protegidas com **React Router v6**
+
+**Chat e Comunicação**
+- 💬 Módulo de chat em tempo real  
+- 🧩 Componentização (ChatHeader, ChatBody, ChatFooter)  
+- 🎤 **Módulo Speech** (Reconhecimento de Voz – Web Speech API)  
+
+**Acessibilidade**
+- 🤟 Integração com **VLibras** (Língua Brasileira de Sinais Virtual)  
+- 🎙️ **SpeechRecognition** para comandos por voz  
+- Layout responsivo com **Styled-components**  
+
+---
+
+## 🧱 Estrutura do Projeto (simplificada)
+
+src/
+components/
+Chat/
+ChatHeader/
+ChatBody/
+ChatFooter/
+Sidebar/
+Header/
+Footer/
+SpeechRecognition/ (Speech.jsx)
+pages/
+Home/
+Login/
+index.js
+styled.js
+services/
+firebase.js
+firebaseConfig.js
+Apis.js
+styles/
+global.js
+App.js
+Routes.js
+
+
+---
+
+## 🛠️ Stack & Dependências
+
+- **React 18 (CRA)**  
+- **React Router DOM v6** – Rotas e navegação  
+- **Styled-components** – Estilização modular  
+- **@mui/icons-material** – Ícones visuais  
+- **Firebase** – Autenticação e banco em tempo real  
+- **Web Speech API** – Reconhecimento de voz  
+- **VLibras** – Inclusão em Libras  
 
 ---
 
@@ -56,49 +110,62 @@ Este projeto foi desenvolvido no contexto acadêmico do curso de **Sistemas de I
 
 ---
 
-## ⚙ Pré-requisitos
+## ✅ Pré-requisitos
 
-Antes de começar, certifique-se de ter instalado em sua máquina:
-
-- [Git](https://git-scm.com)  
-- [Node.js](https://nodejs.org/en/)  
-- Editor de código, como [VSCode](https://code.visualstudio.com/)  
-
----
-
-## 🚀 Tecnologias Utilizadas
-
-Este projeto foi construído com:
-
-- **HTML** – Estruturação da aplicação.  
-- **CSS** – Estilização responsiva e acessível.  
-- **JavaScript** – Lógica dinâmica e interações.  
-- **React** – Criação de interface modular e reativa.  
-- **Firebase** – Persistência e gestão de dados em tempo real.  
-- **SpeechRecognition** – Reconhecimento de voz para acessibilidade motora.  
-- **VLibras** – Integração com a Língua Brasileira de Sinais Virtual, garantindo acessibilidade para surdos.  
+- Node.js (recomendado LTS: 18.x ou 20.x)  
+- Yarn ou npm  
+- Conta no Firebase com **Auth habilitado**  
+- Provedores Google e Facebook ativados  
+- Domínios autorizados: `localhost` (dev) e domínio de produção  
 
 ---
 
-## 📚 Bibliotecas e Recursos Extras
+## ⚙️ Configuração do Firebase
 
-- **Styled-components** – Estilização modular no React.  
-- **React Router DOM v6** – Gerenciamento de rotas.  
-- **Material UI Icons** – Ícones visuais para melhorar a UI.  
+```js
+// src/services/firebaseConfig.js
+export const firebaseConfig = {
+  apiKey: "SUA_API_KEY",
+  authDomain: "SEU_PROJETO.firebaseapp.com",
+  projectId: "SEU_PROJETO_ID",
+  storageBucket: "SEU_PROJETO.appspot.com",
+  messagingSenderId: "SENDER_ID",
+  appId: "APP_ID",
+};
 
----
+🚀 Como Executar Localmente
+# 1) Clonar repositório
 
-## 🌍 Impacto e Diferenciais
+# Clone este repositório
+$ git clone https://github.com/joseGjr/samuonline.git
 
-O **SAMU-Mob** foi pensado para unir **tecnologia e acessibilidade**, explorando conceitos modernos como:  
-- Inclusão digital na saúde.  
-- Prototipação de interfaces acessíveis.  
-- Integração de múltiplas formas de interação (voz, texto e sinais).  
+# 2) Instalar dependências
+yarn install    # ou npm install
 
+# 3) Configurar Firebase
+# -> criar src/services/firebaseConfig.js com suas credenciais
 
+# 4) Rodar em desenvolvimento
+yarn start      # ou npm start
+# App em http://localhost:3000
 
----
+# 5) Gerar build de produção
+yarn build      # ou npm run build
 
-<h3 align="center"> 
-🚧 Projeto em constante evolução 🚧
-</h3>
+🌍 Impacto e Diferenciais
+
+O SAMU-Mob vai além de um simples protótipo acadêmico:
+
+Une tecnologia e acessibilidade em saúde.
+
+Explora inclusão digital como diferencial competitivo.
+
+Demonstra capacidade de organização de projeto em camadas, integração com APIs e boas práticas de desenvolvimento.
+
+Além da parte técnica, esse projeto evidencia minha experiência como Quality Assurance (QA), onde atuei em:
+
+Definição e validação de cenários de testes (login social, chat, acessibilidade).
+
+Execução de testes funcionais e exploratórios em fluxos críticos.
+
+Garantia de usabilidade e experiência do usuário em dispositivos e navegadores distintos.
