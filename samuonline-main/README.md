@@ -154,10 +154,4 @@ Explora inclusão digital como diferencial competitivo.
 
 Demonstra capacidade de organização de projeto em camadas, integração com APIs e boas práticas de desenvolvimento.
 
-Além da parte técnica, esse projeto evidencia minha experiência como Quality Assurance (QA), onde atuei em:
 
-Definição e validação de cenários de testes (login social, chat, acessibilidade).
-
-Execução de testes funcionais e exploratórios em fluxos críticos.
-
-Garantia de usabilidade e experiência do usuário em dispositivos e navegadores distintos.
